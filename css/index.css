@@ -7,6 +7,7 @@
     animation: changeImg 45s infinite;
     animation-timing-function: ease-in-out;
     background-image: url(images/slide.png);
+    background-repeat: no-repeat;
     overflow: hidden;
 }
 @keyframes changeImg {
@@ -81,3 +82,120 @@
     }
 }
 /* 메인 이미지 종료 */
+
+/* 메인 컨텐트 영역 시작 */
+#mainContentArea{
+    width: 39%;
+    /* display: inline-block;
+    width: 39%; */
+}
+#mainContentArea section{
+    width: 532px;
+    height: 283px;
+    margin: 100px auto;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 3px #ccc;
+    padding: 30px 0px;
+    position: relative;
+}
+
+#mainContentArea h2{
+    font-size: 15pt;
+    letter-spacing: 0.1em;
+    font-family: "Score1";
+    margin-left: 15px;
+
+}
+
+/* NEW 영역 시작 */
+#mainContentArea .news article{
+    margin-top: 60px;
+    position: relative;
+}
+
+#mainContentArea .news article h3{
+    position: absolute;
+    line-height: 13pt;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    right: 15px;
+    display: inline-block;
+    width: 300px;
+    font-size: 10pt;
+    text-align: left;
+}
+#mainContentArea .news article time{
+    position: absolute;
+    right: 15px;
+    top: 30px;
+    font-size: 8pt;
+    text-align: left;
+}
+#mainContentArea .news article p{
+    position: absolute;
+    right: 15px;
+    width: 300px;
+    top: 50px;
+    font-size: 10pt;
+    text-align: left;
+    text-align: justify;
+    line-height: 13pt;
+    letter-spacing: 0.05em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 120px;
+}
+
+
+#mainContentArea .news figure{
+    width: 180px;
+    height: 137px;
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+}
+
+#mainContentArea .news img{
+    width: 180px;
+}
+
+#mainContentArea .more{
+    position: absolute;
+    top: 35px;
+    right: 15px;
+}
+/* NEW 영역 종료 */
+
+/* MEMBERSHIP of the month 시작 */
+#mainContentArea .msOfTheMonth{
+    height: 200px;
+}
+
+#mainContentArea .msOfTheMonth li{
+    margin: 10px 0;
+    width: 400px;
+    height: 50px;
+    border-radius: 0px 30px 30px 0px;
+    background-color: #f1de78;
+}
+#mainContentArea .msOfTheMonth li:last-child{
+    background-color: #fff;
+    position: absolute;
+    white-space: nowrap;
+    width: 160px;
+    bottom: 0;
+    right: 15px;
+
+}
+
+
+#mainContentArea .msOfTheMonth img{
+    width: 47px;
+}
+/* MEMBERSHIP of the month 종료 */
+
+
+
+/* 메인 컨텐트 영역 종료 */
