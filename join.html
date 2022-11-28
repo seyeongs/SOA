@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="JSY">
+    <meta name="keywords" content="건축, SOA, 소사이어티 오브 아키, 아키, arkhi">
+    <meta name="description" content="장현태 대표의 건축 스튜디오 SOA 웹사이트입니다. 새로운 건축 서비스를 경험해 보세요.">
+    <meta name="robots" content="all">
+    <link rel="shortcut icon" href="images/shorticon.png">
+    <title>JOIN SOA MEMBERSHIP</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $(".join_btn").click(function(){
+                $(".popit").removeClass("hidden");
+                $("#joinContentArea").css({
+                    backgroundColor: "#9e9e9e"
+                });
+            });
+
+            $(".popit>a").click(function(){
+                $(".popit").addClass("hidden");
+                window.location = "join.html";
+            });
+
+            $("#email_confirm_btn").click(function(){
+                $("#email_confirm").parent().removeClass("hidden");    
+            });
+
+            $("#phone_confirm_btn").click(function(){
+                $("#phone_confirm").parent().removeClass("hidden");    
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/join.css">
+</head>
+<body>
+    <!-- 헤더 영역 시작 -->
+    <header>
+        <!-- 로고 시작 -->
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="SOA_logo">
+            </a>
+        </h1>
+        <!-- 로고 종료 -->
+
+        <!-- 메인 메뉴 시작 -->
+        <nav role="navigation">
+            <h2 class="hidden">메인메뉴</h2>
+            <ul class="mainMenu">
+                <li><a href="idea.html">IDEA</a></li>
+                <li class="pro">
+                    <a href="public.html">PROJECT</a>
+                    <ul class="projectSub">
+                        <li class="public"><a href="public.html">Public</a></li>
+                        <li class="custom"><a href="#">Custom</a></li>
+                        <li class="inside"><a href="#">Inside</a></li>
+                    </ul>    
+                </li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">STORE</a></li>
+                <li class="mem">
+                    <a href="join.html">MEMBERSHIP</a>
+                    <ul class="membershipSub">
+                        <li class="aboutSM"><a href="#">About SOA Membership</a></li>
+                        <li class="join"><a href="join.html">Join</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <section class="search">
+            <h2 class="hidden">SOA 통합 검색</h2>
+            <form action="search.jsp">
+                <fieldset>
+                    <legend>검색 폼</legend>
+                    <input type="search" name="searchWord" id="searchWord">
+                    <button type="submit">검색버튼</button>
+                </fieldset>
+            </form>
+        </section>
+
+        </form>
+        <!-- 메인 메뉴 종료 -->
+    </header>
+    <!-- 헤더 영역 종료-->
+
+    <!-- 조인 컨텐츠 영역 시작 -->
+    <div id="joinContentArea">
+        <h2 class="hidden">SOA 멤버쉽 가입</h2>
+        <section class="joinUs">
+            <h2>SOA MEMBERSHIP</h2>
+            <div class="container">
+                <img src="images/logo.png" alt="SOA로고">
+                <button class="join_btn">가입하기</button>
+            </div>
+        </section>
+        <div class="popit hidden">
+            <a href="#"><img src="images/cancle.png" alt="cancle">cancle</a>
+            <form action="join.jsp" method="post" id="joinForm" name="joinForm">
+                <fieldset>
+                    <legend>멤버쉽 가입 폼</legend>
+                    <p>
+                        <label for="name">이름</label><br>
+                        <input type="text" id="name" name="name" required placeholder="ex)김둘리">
+                    </p>
+                    <p>
+                        <label for="email">이메일</label><br>
+                        <p class="notice">멤버쉽 아이디로 사용됩니다.</p><br>
+                        <input type="email" id="email" name="email" required placeholder="ex)pronetpv@naver.com">
+                        <a id="email_confirm_btn" href="#">인증메일 발송</a>
+                    </p>
+                    <p class="hidden">
+                        <label for="email_confirm">이메일 인증번호</label><br>
+                        <input type="text" id="email_confirm" name="email_confirm" required>
+                        <a href="#">확인</a>
+                    </p>
+                    <p>
+                        <label for="phone">휴대폰</label><br>
+                        <input type="tel" id="phone" name="phone" required>
+                        <a id="phone_confirm_btn" href="#">인증번호 발송</a>
+                    </p>
+                    <p class="hidden">
+                        <label for="phone_confirm">휴대폰 인증번호</label><br>
+                        <input type="tel" id="phone_confirm" name="phone_confirm" required>
+                        <a href="#">확인</a>
+                    </p>
+                    <p>
+                        <label for="addr">주소</label><br>
+                        <p class="notice">미입력시 우편물 수령이 불가합니다</p><br>
+                        <input type="tel" id="zipcode" name="zipcode">
+                        <a href="find_zipcode.html" class="finZipcode">우편번호 찾기</a><br>
+                        <input type="text" id="addr" name="addr" placeholder="상세주소">
+                    </p>
+                    <p>
+                        <label for="password">비밀번호</label><br>
+                        <input type="password" id="password" name="password" required>
+                    </p>
+                    <p>
+                        <label for="password_confirm">비밀번호 확인</label><br>
+                        <input type="password" id="password_confirm" name="password_confirm" required>
+                    </p>
+                    <button type="submit" class="joinbtn">JOIN</button>
+                </fieldset>
+            </form>
+
+        </div>
+    </div>
+    <!-- 아이디어 컨텐츠 영역 종료 -->
+    <!-- 푸터 영역 시작 -->
+    <footer id="footer">
+        <p class="copyright">&copy;SOA</p>
+        <address>
+            <span>서울시 서초구 서운로 29 서초월드 1001~1010호</span>
+            <span>Tel)02-583-1611</span>
+        </address>
+        <div class="snsLink">
+            <span><img src="images/youtube.png" alt="youtubelogo"></span>
+            <span><img src="images/twitter.png" alt="twitterlogo"></span>
+            <span><img src="images/insta.png" alt="instagramlogo"></span>
+        </div>
+    </footer>
+    <!-- 푸터 영역 종료 -->
+</body>
+</html>

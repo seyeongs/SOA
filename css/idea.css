@@ -1,0 +1,197 @@
+.mainMenu>li:first-child{
+    background-color: #fee2e2;
+    box-shadow: 2px 2px 3px #999;
+}
+
+/* 아이디어 컨텐츠 영역 시작 */
+#ideaContentArea{
+    width: 1310px;
+    height: 850px;
+    margin: 200px auto;
+    position: relative;
+    display: -moz-grid;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 460px 850px;
+    grid-template-rows: 425px 425px;
+    text-align: center;
+    overflow: hidden;
+    
+}
+.ideaTitle{
+    position: relative;
+    margin: 0 auto;
+    /* top: 180px;
+    left: 285px; */
+    display: inline-block;
+    display: inline-block;
+    font-family: "score6";
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: 5px;
+    cursor: default;
+}
+
+#ideaContentArea img{
+    width: 350px;
+}
+
+.wrap{
+    overflow: hidden;
+}
+
+.simple{
+
+    width: 460px;
+    /* width: 1310px; */
+    height: 850px;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    z-index: 0;
+    
+}
+.simple h2{
+    position: relative;
+    color: #fff;
+    font-family: "score6";
+    font-size: 35px;
+    line-height: 850px;
+    letter-spacing: 20px;
+    transition: all 0.5s;
+}
+.simple .ideaDesc{
+    
+    opacity: 0;
+}
+.simple .ideaDesc img{
+    position: absolute;
+    width: 500px;
+    top: 250px;
+    right: 100px;
+    
+}
+.simple .ideaDesc p{
+    position: absolute;
+    display: inline-block;
+    color: #fff;
+    bottom: 100px;
+    left: 70px;
+    font-family: "score1";
+    text-align: left;
+    font-size: 25px;
+    line-height: 44px;
+}
+
+.customized{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 850px;
+    height: 425px;
+    background-color: #731022;
+    text-align: center;
+    cursor: pointer;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 0;
+}
+.customized h2{
+    position: relative;
+    color: #fff;
+    font-family: "score6";
+    font-size: 35px;
+    line-height: 460px;
+    letter-spacing: 20px;
+    transition: all 0.5s;
+}
+.customized .ideaDesc{
+    opacity: 0;
+}
+.customized .ideaDesc img{
+    position: absolute;
+    width: 500px;
+    top: 250px;
+    right: 50px;
+    
+}
+.customized .ideaDesc p{
+    position: absolute;
+    display: inline-block;
+    color: #fff;
+    bottom: 100px;
+    left: 70px;
+    font-family: "score1";
+    text-align: left;
+    font-size: 25px;
+    line-height: 44px;
+}
+.community{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 850px;
+    height: 425px;
+    background-color: #74513d;
+    text-align: center;
+    cursor: pointer;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    z-index: 0;
+    
+}
+.community h2{
+    position: relative;
+    color: #fff;
+    font-family: "score6";
+    font-size: 35px;
+    line-height: 460px;
+    letter-spacing: 20px;
+    transition: all 0.5s;
+}
+.community .ideaDesc{
+    opacity: 0;
+}
+
+@keyframes spining{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.community .ideaDesc img{
+    position: absolute;
+    width: 500px;
+    top: 250px;
+    right: 70px;
+    
+}
+
+.community .ideaDesc p{
+    position: absolute;
+    display: inline-block;
+    color: #fff;
+    bottom: 100px;
+    left: 70px;
+    font-family: "score1";
+    text-align: left;
+    font-size: 25px;
+    line-height: 44px;
+}
+
+.spin{
+    animation: spining 5s linear infinite;
+}
+/* 호버 클래스 */
+.hovering:hover h2{
+    transform: scale(1.1); 
+}
+/* 호버 클래스 */
+/* 아이디어 컨텐츠 영역 종료 */

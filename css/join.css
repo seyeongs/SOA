@@ -1,0 +1,139 @@
+#joinContentArea{
+    min-height: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    transition: all 0.5s;
+}
+.joinUs{
+    position: relative;
+    top: 200px;
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+}
+.joinUs>h2{
+    position: absolute;
+    left: 255px;
+    bottom: -60px;
+    font-family: "score1";
+    font-size: 50px;
+    font-weight: lighter;
+    letter-spacing: 5px;
+    display: inline-block;
+}
+.container{
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    display: inline-block;}
+
+.joinUs .join_btn{
+    position: absolute;
+    left: 275px;
+    bottom: -140px;
+    border: none;
+    width: 450px;
+    border-radius: 10px;
+    background-color: #731022;
+    color: #fff;
+    font-family: "score1";
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+
+/* popit영역 시작 */
+.popit{
+    position: relative;
+    margin: 0 auto;
+    top: -150px;
+    width: 600px;
+    height: 750px;
+    background-color: rgba(0,0,0,0.9);
+}
+.popit>a{
+    color: rgba(0,0,0,0);
+    
+}
+.popit>a>img{
+    position: absolute;
+    right: 20px;
+    top:10px;
+    width: 20px;
+}
+#joinForm{
+    position: absolute;
+    font-family: "score1";
+    font-weight: lighter;
+    font-size: 15px;
+    left: 40px;
+    top:70px;
+    color: #fff;
+    text-align: left;
+}
+#joinForm fieldset{
+    border: none;
+    width: 550px;
+    height: 800px;
+}
+#joinForm p {
+
+}
+
+#joinForm a{
+    display: inline-block;
+    background-color: #9e9e9e;
+    font-family: "score2";
+    width: 100px;
+    margin-bottom: 2px;
+    height: 20px;
+    color: #000;
+    line-height: 20px;
+    text-align: center;
+    
+    font-size: 12px;
+}
+#joinForm input{
+    width: 250px;
+    margin: 5px 0 15px 0;
+    text-indent: 5px;
+}
+#zipcode{
+    margin-bottom: 0;
+}
+#addr{
+    position: relative;
+    top: -15px;
+    margin-top: 0;
+}
+#joinForm label{
+    margin:0px 0 15px 0;
+    width: 250px;
+    font-weight: lighter;
+}
+#joinForm fieldset .notice{
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 12px;
+    letter-spacing: 0.8px;
+}
+
+#joinForm fieldset .joinbtn{
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    font-family: "score1";
+    font-weight: lighter;
+    letter-spacing: 30px;
+    color: #fff;
+    background-color: #731022;
+    margin-top: 50px;
+    margin-left: 50px;
+    text-indent: 23px;
+    text-align: center;
+    border: none;
+    box-sizing: border-box;
+
+}
+

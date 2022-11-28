@@ -242,3 +242,56 @@ nav{
 /* 헤더 종료 */
 
 
+
+/* 푸터 영역 시작 */
+#footer img{
+    width: 30px;
+}
+#footer{
+    overflow: hidden;
+    clear: both;
+    position: relative;
+    width: 100%;
+    height: 35px;
+    margin-bottom: 0;
+    background-color: #ccc;
+}
+
+#footer .copyright{
+    position: absolute;
+    top: 0;
+    margin-left: 5px;
+    margin-top: 11px;
+    font-weight: bold;
+}
+
+#footer address{
+    position: absolute;
+    left: 50px;
+    top: 0;
+    margin-top: 11px;
+    font-style: normal;
+}
+
+#footer .snsLink{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#footer .snsLink span{
+    cursor: pointer;
+
+}
+#footer .snsLink span:first-child{
+    position: relative;
+    top: -5px;
+
+}
+#footer .snsLink span:last-child{
+    position: relative;
+    top: 3px;
+
+}
+/* 푸터 영역 종료 */
+
+

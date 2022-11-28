@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="JSY">
+    <meta name="keywords" content="건축, SOA, 소사이어티 오브 아키, 아키, arkhi">
+    <meta name="description" content="장현태 대표의 건축 스튜디오 SOA 웹사이트입니다. 새로운 건축 서비스를 경험해 보세요.">
+    <meta name="robots" content="all">
+    <link rel="shortcut icon" href="images/shorticon.png">
+    <title>SOA PUBLIC PROJECT</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/public.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var images = [{
+                img1 : "흥덕청소년문화의집.jpg",
+                img2 : "흥덕청소년문화의집2.jpg",
+                desc : "흥덕 청소년 문화의 집"
+            },{
+                img1 : "고덕초등학교.jpg",
+                img2 : "고덕초등학교2.jpg",
+                desc : "고덕 초등학교"
+            },{
+                img1 : "여산휴게소.jpg",
+                img2 : "여산휴게소2.jpg",
+                desc : "여산 휴게소"
+            },{
+                img1 : "충남도청.jpg",
+                img2 : "충남도청2.jpg",
+                desc : "충남 도청"
+            },{
+                img1 : "수방사랜드마크.jpg",
+                img2 : "수방사랜드마크2.jpg",
+                desc : "수방사 랜드마크"
+            },{
+                img1 : "울산다운.jpg",
+                img2 : "울산다운2.jpg",
+                desc : "울산 다운"
+            }]
+            $(".slider_panel>img").click(function(){
+                var idx = $(this).index();
+                $(".slider_panel>img").removeClass("selected")
+                $(this).addClass("selected")
+                $("#projectImage").html("");
+                $("#projectImage").hide();
+                $("<img src='images/public/"+images[idx].img1+"' alt='"+images[idx].img1.split(".",1)+"'>").appendTo("#projectImage");
+                $("<img src='images/public/"+images[idx].img2+"' alt='"+images[idx].img2.split(".",1)+"'>").appendTo("#projectImage");
+                $("<div class='imageInfo'><h3>"+images[idx].desc+"</h3></div>").appendTo("#projectImage");
+                $("#projectImage").slideDown(2000);
+            });
+
+            var index = 0;
+            var maxIndex = $(".slider_panel>img").length/2;
+            $(".arrowControlPanel>img").eq(0).hide();
+            $(".arrowControlPanel>img").eq(0).click(function(){
+                index--;
+                $(".arrowControlPanel>img").eq(1).show();
+                if(index <= 0){
+                    index = 0;
+                    $(this).hide();
+                }
+                $(".slider_panel").animate({
+                    left : -(index*1600)
+                },1000);
+            });
+            $(".arrowControlPanel>img").eq(1).click(function(){
+                index++;
+                $(".arrowControlPanel>img").eq(0).show();
+                if(index >= maxIndex-1){
+                    index=maxIndex-1;
+                    $(this).hide();
+                }
+                $(".slider_panel").animate({
+                    left : -(index*1600)
+                },1000);
+            });
+
+            $("#gotop").click(function(){
+                window.scrollTo(0,0);
+            })
+        });
+    </script>
+</head>
+<body>
+    <!-- 헤더 영역 시작 -->
+    <header>
+        <!-- 로고 시작 -->
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="SOA_logo">
+            </a>
+        </h1>
+        <!-- 로고 종료 -->
+
+        <!-- 메인 메뉴 시작 -->
+        <nav role="navigation">
+            <h2 class="hidden">메인메뉴</h2>
+            <ul class="mainMenu">
+                <li><a href="idea.html">IDEA</a></li>
+                <li class="pro">
+                    <a href="public.html">PROJECT</a>
+                    <ul class="projectSub">
+                        <li class="public"><a href="public.html">Public</a></li>
+                        <li class="custom"><a href="#">Custom</a></li>
+                        <li class="inside"><a href="#">Inside</a></li>
+                    </ul>    
+                </li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">STORE</a></li>
+                <li class="mem">
+                    <a href="join.html">MEMBERSHIP</a>
+                    <ul class="membershipSub">
+                        <li class="aboutSM"><a href="#">About SOA Membership</a></li>
+                        <li class="join"><a href="join.html">Join</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <section class="search">
+            <h2 class="hidden">SOA 통합 검색</h2>
+            <form action="search.jsp">
+                <fieldset>
+                    <legend>검색 폼</legend>
+                    <input type="search" name="searchWord" id="searchWord">
+                    <button type="submit">검색버튼</button>
+                </fieldset>
+            </form>
+        </section>
+
+        </form>
+        <!-- 메인 메뉴 종료 -->
+    </header>
+    <!-- 헤더 영역 종료-->
+
+    <!-- 퍼블릭 프로젝트 컨텐츠 영역 시작 -->
+    <div id="publicProjectContentArea">
+        <h2>PUBLIC PROJECT</h2>
+        <!-- 슬라이더 영역 시작 -->
+        <div class="projectCanvas">
+            <div class="slider_panel">
+                <img src="images/public/흥덕청소년문화의집.jpg" alt="흥덕청소년문화의집">
+                <img src="images/public/고덕초등학교.jpg" alt="고덕초등학교">
+                <img src="images/public/여산휴게소.jpg" alt="여산휴게소">
+                <img src="images/public/충남도청.jpg" alt="충남도청">
+                <img src="images/public/수방사랜드마크.jpg" alt="수방사랜드마크">
+                <img src="images/public/울산다운.jpg" alt="울산다운">
+            </div>
+        </div>
+        <div class="controlBox">
+            <div class="arrowControlPanel">
+                <img src="images/left-arrow.png" alt="left_slider">
+                <img src="images/right-arrow.png" alt="right_slider">
+            </div>
+        </div>
+        <!-- <p class="sliderCnt"> 1/3</p> -->
+        <!-- 슬라이더 영역 종료 -->
+
+        <!-- 상세 이미지 영역 시작 -->
+        <div id="projectImage">
+            <img src="" alt="">
+            <div class="infoBox">
+                <h3 class="imageTitle"></h3>
+            </div>
+        </div>
+        <!-- 상세 이미지 영역 종료 -->
+
+        <!-- 상단으로 이동 버튼-->
+        <button id="gotop"> 최상단으로 이동</button>
+        <!-- 상단으로 이동 버튼-->
+    </div>
+    <!-- 퍼블릭 프로젝트 컨텐츠 영역 종료 -->
+    <!-- 푸터 영역 시작 -->
+    <footer id="footer">
+        <p class="copyright">&copy;SOA</p>
+        <address>
+            <span>서울시 서초구 서운로 29 서초월드 1001~1010호</span>
+            <span>Tel)02-583-1611</span>
+        </address>
+        <div class="snsLink">
+            <span><img src="images/youtube.png" alt="youtubelogo"></span>
+            <span><img src="images/twitter.png" alt="twitterlogo"></span>
+            <span><img src="images/insta.png" alt="instagramlogo"></span>
+        </div>
+    </footer>
+    <!-- 푸터 영역 종료 -->
+</body>
+</html>
